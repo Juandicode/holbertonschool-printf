@@ -28,9 +28,12 @@ int main(void)
     _printf("%s %s\n", "Hello", "World");
     printf("%s %s\n", "Hello", "World");
 
-	int len234234 = printf("%");
+	int len234234 = _printf("%");
 
 	printf("%d", len234234);
+	int len234233 = printf("%");
+
+        printf("%d", len234233);
 
     return (0);
 }
