@@ -1,22 +1,19 @@
-#include <stdarg.h>
-#include <unistd.h>
 #include "main.h"
-/*
- * _printf - eugkjbgfd
- * - printea un caracter, un string y un %
- * @format: puntero al string
- * Return: Contador
+#include <unistd.h>
+#include <stdarg.h>
+
+/**
+ * _printf - prints output according to format
+ * @format: format string
+ * Return: number of characters printed
  */
-int _printf(const char *format,...)
+int _printf(const char *format, ...)
 {
     int contador = 0;
     va_list args;
     char c;
     char *s;
 
-    if (*format == '\0') {
-        return 0; /* or some other default value */
-    }
     va_start(args, format);
     for (; *format; format++) {
         if (*format == '%') {
@@ -40,7 +37,7 @@ int _printf(const char *format,...)
                     }
                     break;
                 default:
-                    write(1, format - 1, 1);
+                    write(1, "%", 1);
                     contador++;
                     break;
             }
