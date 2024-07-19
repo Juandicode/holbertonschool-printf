@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
 	i += 1;
 	if (format[i] == 'c')
 	{
-	c = va_arg(args, char);
+	c = va_arg(args, int);
 	write(1, &c, 1);
 	contador++;
 	}
