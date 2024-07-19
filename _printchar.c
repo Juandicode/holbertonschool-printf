@@ -40,6 +40,10 @@ int _printf(const char *format, ...)
                 contador++;
             }
         }
+	else if (format[i] == '%' && format[i + 1] != '\0')
+	{
+		return (-1);
+	}
         else
         {
             write(1, &format[i], 1);
