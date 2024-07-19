@@ -33,7 +33,14 @@ int main(void)
 	printf("%d", len234234);
 	int len234233 = printf("%");
 
-        printf("%d", len234233);
+        printf("%d\n\n", len234233);
+
+
+	len = _printf("%!\n");
+	printf("%d\n", len);
+
+	len = printf("%!\n");
+        printf("%d\n", len);
 
     return (0);
 }

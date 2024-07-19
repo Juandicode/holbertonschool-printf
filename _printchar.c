@@ -39,6 +39,10 @@ int _printf(const char *format, ...)
                 write(1, "%", 1);
                 contador++;
             }
+	    else
+	    {
+		    contador = contador + write(1, &format[i - 1], 2);
+	    }
         }
 	else if (format[i] == '%' && format[i + 1] == '\0')
 	{
