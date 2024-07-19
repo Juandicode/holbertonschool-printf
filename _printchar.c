@@ -19,16 +19,13 @@ int _printf(const char *format, ...)
     {
         if (format[i] == '%' && format[i + 1] != '\0')
         {
-	if (format[i] == '%' && format[i + 1] == '\0') 
-           contador = -1;
-	       	i++;
+            i++;
             if (format[i] == 'c')
             {
                 c = va_arg(args, int);
                 write(1, &c, 1);
                 contador++;
-	
-		}
+            }
             else if (format[i] == 's')
             {
                 s = va_arg(args, char *);
@@ -40,8 +37,8 @@ int _printf(const char *format, ...)
             else if (format[i] == '%')
             {
                 write(1, "%", 1);
-                contador++; 
-	   }
+                contador++;
+            }
         }
         else
         {
