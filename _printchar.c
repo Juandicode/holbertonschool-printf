@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 	else if (format[i] == 's')
 	{
 	s = va_arg(args, char *);
-	contador = contador + write(1, &s, _strlen(s));
+	contador = contador + write(1, s, _strlen(s));
 	}
 	}
 	}
