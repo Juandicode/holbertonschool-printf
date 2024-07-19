@@ -2,5 +2,5 @@
 #define MAIN_H
 
 int _printf(const char *format, ...);
-
-#endif  // MAIN_H
+int _strlen(char *s);
+#endif  /** MAIN_H */

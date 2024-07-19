@@ -1,5 +1,6 @@
 #include <stdarg.h>
 #include <unistd.h>
+#include "main.h"
 /*
  * _printf - eugkjbgfd
  * - printea un caracter, un string y un %
@@ -24,7 +25,7 @@ int _printf(const char *format, ...)
 	i += 1;
 	if (format[i] == 'c')
 	{
-	c = va_arg(args, char);
+	c = va_arg(args, int);
 	write(1, &c, 1);
 	contador++;
 	}
@@ -36,7 +37,7 @@ int _printf(const char *format, ...)
 	else if (format[i] == 's')
 	{
 	s = va_arg(args, char *);
-	contador = contador + write(1, &s, strlen(s));
+	contador = contador + write(1, &s, _strlen(s));
 	}
 	}
 	}
