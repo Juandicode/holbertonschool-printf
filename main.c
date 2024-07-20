@@ -7,6 +7,8 @@ int main(void)
 {
     int len;
     int len2;
+    int len234234 = _printf("%");
+    int len234233 = printf("%");
 
     len = _printf("Hello, World!\n");
     len2 = printf("Hello, World!\n");
@@ -28,10 +30,7 @@ int main(void)
     _printf("%s %s\n", "Hello", "World");
     printf("%s %s\n", "Hello", "World");
 
-	int len234234 = _printf("%");
-
 	printf("%d", len234234);
-	int len234233 = printf("%");
 
         printf("%d\n\n", len234233);
 
