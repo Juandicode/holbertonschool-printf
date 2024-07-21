@@ -14,25 +14,50 @@ int print_int(int n)
     char str[12];       /* el tamao es 10 porque el maximo int es 2147483648 */
     int i = 0;          /* lo uso para moverme en el arreglo str */
 
+    if(n==INT_MIN)
+    {
+	 write(1,"-",1); /* imprimo el simbolo negativo */
+	write(1,"2",1);
+	write(1,"1",1);
+	write(1,"4",1);
+	write(1,"7",1);
+	write(1,"4",1);
+	write(1,"8",1);
+	write(1,"3",1);
+	write(1,"6",1);
+	write(1,"4",1);
+	write(1,"7",1);
+    }
+    else if (n == INT_MAX)
+    {
+	write(1,"2",1);
+        write(1,"1",1);
+        write(1,"4",1);
+        write(1,"7",1);
+        write(1,"4",1);
+        write(1,"8",1);
+        write(1,"3",1);
+        write(1,"6",1);
+        write(1,"4",1);
+        write(1,"7",1);
+    }
+    else
+    {
+    
+
     if (n == 0)         /*si es 0 el numero */
     {
         write(1,"0",1); /*imprimo 0*/
         return 1;       /* el largo es 1*/
     }
 
-    if (n < 0)          /* si n es negativo */
+    if (n < 0)        /* si n es negativo */
     {
         write(1,"-",1); /* imprimo el simbolo negativo */
-	if( n == INT_MIN )
-	{
-		n= INT_MAX;
-	}
-	else
-	{
-		n = -n;         /* cambio el signo de n */
-	}
+	n = -n;         /* cambio el signo de n */
         contador++;        /* aumento el contador por el simbolo de - */
     }
+
 
     while (n > 0)
     {
@@ -46,7 +71,7 @@ int print_int(int n)
         write(1, &str[--i], 1);
         contador++;
     }
-
+	}
     return (contador);
 }
 
