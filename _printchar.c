@@ -73,7 +73,7 @@ int _printf(const char *format, ...)
 				write(1, "%", 1);
 				contador++;
 			}
-			else if (*format == 'd' || *format == 'i')      /* si es d o i entro al if */
+			else if (format[i] == 'd' || format[i] == 'i')      /* si es d o i entro al if */
 			{
                 		contador += print_int(va_arg(args, int));       /* llamo a la funcion para que imprima el int y le sume su largo a la variable contador */
 			}
