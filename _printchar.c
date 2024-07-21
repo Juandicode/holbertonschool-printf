@@ -26,7 +26,7 @@ int print_int(int n)
 	write(1,"3",1);
 	write(1,"6",1);
 	write(1,"4",1);
-	write(1,"7",1);
+	write(1,"8",1);
 	contador=11;
     }
     else if (n == INT_MAX)
@@ -41,7 +41,7 @@ int print_int(int n)
         write(1,"6",1);
         write(1,"4",1);
         write(1,"7",1);
-	contador=11;
+	contador=10;
     }
     else
     {
