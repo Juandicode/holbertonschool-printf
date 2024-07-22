@@ -91,7 +91,7 @@ int _printf(const char *format, ...)
 			i++;
 			if (format[i] == 'c')
 			{
-				c = va_arg(args, int); /* esta linea utiliza la macro va_arg para obtener el proximo argumento de la lista de argumentos variables 'args'
+				c = va_arg(args, int); /* esta linea utiliza la macro va_arg para obtener el proximo argumento de la lista de argumentos variables 'args' */
 				write(1, &c, 1);
 				contador++;
 			}
@@ -108,7 +108,7 @@ int _printf(const char *format, ...)
 				write(1, "%", 1);
 				contador++;
 			}
-			else if (format[i] == 'd' || format[i] == 'i')      /* si es d o i entro al if */
+			else if (format[i] == 'd' || format[i] == 'i')    
 			{
                 		contador += print_int(va_arg(args, int));       /* llamo a la funcion para que imprima el int y le sume su largo a la variable contador */
 			}
