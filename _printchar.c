@@ -77,7 +77,7 @@ while (i > 0)                       /* leo el arreglo de adelante para atras y v
     return (contador);
 }
 
-int _printf(const char *format, ...) /* es la declaracion de la funcion, devuelve un valor de tipo int, y const char *format es un puntero a un string */
+int _printf(const char *format, ...) 
 {
 	int contador = 0, i, j;  /* declaracion de variables de tipo int */
 	va_list args;                  /*declaracion de variable q almacenara la lista de argumentos variables */
