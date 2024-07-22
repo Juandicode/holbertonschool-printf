@@ -97,11 +97,11 @@ int _printf(const char *format, ...)
 			}
 			else if (format[i] == 's')
 			{
-				s = va_arg(args, char *);
-				if (s == NULL)
-					s = "(null)";
-				for (j = 0; s[j]; j++, contador++)
-					write(1, &s[j], 1);
+				s = va_arg(args, char *); /* utilizo la macro va_arg para obtener el proximo argumento de la lista de armts vrbls, que se almacena en la variable s que es un puntero a un string */
+				if (s == NULL)    /* es null? */
+					s = "(null)"; /* entonces retorna null */
+				for (j = 0; s[j]; j++, contador++) /* inicia un bucle for hatsa el final de la cadena */
+					write(1, &s[j], 1);   /* imprime cada caracter de la cadena s, &s[j] es la direccion de memoria del caracter actual  */
 			}
 			else if (format[i] == '%')
 			{
