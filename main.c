@@ -36,13 +36,11 @@ int main(void)
         printf("Negative:[%d]\n", -762534);
 
         printf("%d\n\n", len234233);
+	
+	_printf("%c\n", 'A');
+	printf("%c\n", 'A');
 
 
-	len = _printf("%!\n");
-	printf("%d\n", len);
-
-	len = printf("%!\n");
-        printf("%d\n", len);
 
     return (0);
 }
