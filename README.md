@@ -32,3 +32,6 @@ The function iterates through the format string, and for each format specifier, 
 The implementation uses the `write` function to print characters to the standard output, which allows for more control over the output. The `print_int` function is used to print integers, and the `_printf` function is used to print the formatted string.
 
 The implementation also handles the cases for `INT_MIN` and `INT_MAX` separately, and uses the `va_list` type to handle the variable arguments.
+
+
+![Flowchart](archivodeflow.drawio.png)
