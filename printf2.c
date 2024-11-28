@@ -5,6 +5,18 @@
 /**
  *
  */
+char printstr(char *s, int *contador)
+{
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		write(1, &s[i], 1);
+	}
+}
+/**
+ *
+ */
 int _printf(const char *format, ...)
 {
 	int i = 0, contador = 0;
@@ -31,8 +43,11 @@ int _printf(const char *format, ...)
 					write(1, &c, 1);
 					contador++;
 					break;
+				case 's':
+					printstr(va_arg(arg, char *), &contador);
+					break;
 			}
 		}
 	}
-
+	return (1);
 }
