@@ -5,10 +5,11 @@
  *
  */
 void printch(char c, int *contador)
- {
+{
  	write(1, &c, 1);
- 	(*contador)+
- }
+ 	(*contador)++;
+}
+
 /**
  *
  */
@@ -59,7 +60,7 @@ int _printf(const char *format, ...)
 			switch (format[i])
 			{
 				case 'c':
-					printch(va_arg(arg, int *), &contador);
+					printch(va_arg(arg, int), &contador);
 					break;
 				case 's':
 					printstr(va_arg(arg, char *), &contador);
