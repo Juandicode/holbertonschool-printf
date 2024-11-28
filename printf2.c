@@ -5,14 +5,20 @@
 /**
  *
  */
-char printstr(char *s, int *contador)
+int printstr(char *s, int *contador)
 {
-	int i;
+    int i;
 
-	for (i = 0; s[i] != '\0'; i++)
-	{
-		write(1, &s[i], 1);
-	}
+    if (s == NULL)
+        s = "(null)";
+
+    for (i = 0; s[i] != '\0'; i++)
+    {
+        write(1, &s[i], 1);
+        (*contador)++;
+    }
+
+    return (i);
 }
 /**
  *
