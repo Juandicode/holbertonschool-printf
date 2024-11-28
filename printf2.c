@@ -16,7 +16,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] != '%')
 		{
-			write(1, format[i], 1);
+			write(1, &format[i], 1);
 			contador++;
 		}
 		else if (format[i] == '%' && format[i + 1] == '\0')
@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
 			{
 				case 'c':
 					c = va_arg(arg, int);
-					write(1, c, 1);
+					write(1, &c, 1);
 					contador++;
 					break;
 			}
