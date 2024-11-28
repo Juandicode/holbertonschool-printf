@@ -2,12 +2,14 @@
 #include <stdarg.h>
 #include <unistd.h>
 /**
- *
+ * printch - prints a char
+ * @c: char a imprimir
+ * @contador: un puntero a la variable contador de _printf
  */
 void printch(char c, int *contador)
 {
- 	write(1, &c, 1);
- 	(*contador)++;
+	write(1, &c, 1);
+	(*contador)++;
 }
 
 /**
@@ -15,18 +17,18 @@ void printch(char c, int *contador)
  */
 int printstr(char *s, int *contador)
 {
-    int i;
+	int i;
 
-    if (s == NULL)
-        s = "(null)";
+	if (s == NULL)
+		s = "(null)";
 
-    for (i = 0; s[i] != '\0'; i++)
-    {
-        write(1, &s[i], 1);
-        (*contador)++;
-    }
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		write(1, &s[i], 1);
+		(*contador)++;
+	}
 
-    return (i);
+	return (i);
 }
 /**
  *
@@ -43,7 +45,7 @@ int _printf(const char *format, ...)
 {
 	int i = 0, contador = 0;
 	va_list arg;
-	
+
 	va_start(arg, format);
 	for (; format[i] != '\0'; i++)
 	{
@@ -54,7 +56,7 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i] == '%' && format[i + 1] == '\0')
 			return (-1);
-		else
+		if (format[i] == '%')
 		{
 			i++;
 			switch (format[i])
