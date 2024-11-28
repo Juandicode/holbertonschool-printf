@@ -91,7 +91,7 @@ int _printf(const char *format, ...)
 			i++;
 			if (format[i] == 'c')
 			{
-				c = va_arg(args, int); /* esta linea utiliza la macro va_arg para obtener el proximo argumento de la lista de argumentos variables 'args' */
+				c = va_arg(args, int); /* estaa linea utiliza la macro va_arg para obtener el proximo argumento de la lista de argumentos variables 'args' */
 				write(1, &c, 1);
 				contador++;
 			}
