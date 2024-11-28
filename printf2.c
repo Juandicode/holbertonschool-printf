@@ -1,7 +1,16 @@
 #include "main.h"
 #include <stdarg.h>
 #include <unistd.h>
-
+/**
+ *
+ */
+/**
+ * void printch(char c, int *contador)
+ *{
+ *	write(1, &c, 1);
+ *	(*contador)++;
+ *}
+ */
 /**
  *
  */
@@ -23,11 +32,18 @@ int printstr(char *s, int *contador)
 /**
  *
  */
+void printpercent(int *contador)
+{
+	write(1, "%", 1);
+	(*contador)++;
+}
+/**
+ *
+ */
 int _printf(const char *format, ...)
 {
 	int i = 0, contador = 0;
 	va_list arg;
-	char c;
 	
 	va_start(arg, format);
 	for (; format[i] != '\0'; i++)
@@ -45,15 +61,16 @@ int _printf(const char *format, ...)
 			switch (format[i])
 			{
 				case 'c':
-					c = va_arg(arg, int);
-					write(1, &c, 1);
-					contador++;
+					/*printch(va_arg(arg, int), &contador);*/
 					break;
 				case 's':
 					printstr(va_arg(arg, char *), &contador);
 					break;
+				case '%':
+					printpercent(&contador);
 			}
 		}
 	}
-	return (1);
+	va_end(arg);
+	return (contador);
 }
