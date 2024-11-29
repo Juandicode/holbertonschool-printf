@@ -49,11 +49,11 @@ void printpercent(int *contador)
  */
 int _printf(const char *format, ...)
 {
-	int i = 0, contador = 0;
+	int i, contador = 0;
 	va_list arg;
 
 	va_start(arg, format);
-	for (; format[i] != '\0'; i++)
+	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] != '%')
 		{
@@ -76,6 +76,12 @@ int _printf(const char *format, ...)
 				case '%':
 					printpercent(&contador);
 			}
+		}
+		else if (format[i] == '\') 
+		{
+			i++;
+			if (format[i] == 'n')
+				write(1, "\n", 1);
 		}
 	}
 	va_end(arg);
