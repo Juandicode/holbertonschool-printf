@@ -13,7 +13,10 @@ void printch(char c, int *contador)
 }
 
 /**
- *
+ * printstr - prints a char
+ * @s: pointer to the char
+ * @contador: pointer to the variable cntador para iterar cada caracter
+ * Return: size of the string
  */
 int printstr(char *s, int *contador)
 {
@@ -31,7 +34,8 @@ int printstr(char *s, int *contador)
 	return (i);
 }
 /**
- *
+ * printpercent - print the percent simbol
+ * @contador: pointer to a variable to iterate
  */
 void printpercent(int *contador)
 {
@@ -39,7 +43,9 @@ void printpercent(int *contador)
 	(*contador)++;
 }
 /**
- *
+ * _printf - a function to prin chars, ints, and strings
+ * @format: pointer to a string to be printed
+ * Return: amount of charactes printed
  */
 int _printf(const char *format, ...)
 {
