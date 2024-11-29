@@ -24,7 +24,6 @@ void printnumd(int a)
 		write(1, "6", 1);
 		write(1, "4", 1);
 		write(1, "8", 1);
-		(*contador) = (*contador) + 11;
 		return;
 	}
 	if (a < 0)
@@ -42,6 +41,5 @@ void printnumd(int a)
 	{
 		printnumd(b);
 	}
-	(*contador)++;
 	write(1, &c, 1);
 }
