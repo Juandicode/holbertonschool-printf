@@ -40,7 +40,7 @@ void printnumd(int a, int *contador)
 	b = a / 10;
 	if (a != 0)
 	{
-		printnumd(b);
+		printnumd(b, &contador);
 	}
 	(*contador)++;
 	write(1, &c, 1);
