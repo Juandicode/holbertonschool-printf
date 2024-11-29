@@ -77,7 +77,7 @@ int _printf(const char *format, ...)
 					printpercent(&contador);
 			}
 		}
-		else if (format[i] == '\') 
+		else if (format[i] == "\")
 		{
 			i++;
 			if (format[i] == 'n')
