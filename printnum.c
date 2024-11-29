@@ -6,7 +6,7 @@
 /**
  *
  */
-void printnumd(int a, int *contador)
+void printnumd(int a)
 {
 	int b;
 	char c;
@@ -40,7 +40,7 @@ void printnumd(int a, int *contador)
 	b = a / 10;
 	if (a != 0)
 	{
-		printnumd(b, &contador);
+		printnumd(b);
 	}
 	(*contador)++;
 	write(1, &c, 1);
