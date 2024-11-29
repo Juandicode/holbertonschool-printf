@@ -75,6 +75,10 @@ int _printf(const char *format, ...)
 					break;
 				case '%':
 					printpercent(&contador);
+					break;
+				case 'd':
+					printnumd(va_arg(arg, int), &contador);
+					break;
 			}
 		}
 		else if (format[i] == '\\')
