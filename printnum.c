@@ -6,9 +6,9 @@
 /**
  *
  */
-void printnumd(int a)
+int printnumd(int a)
 {
-	int b;
+	int b, contador = 0;
 	char c;
 
 	if (a == INT_MIN)
@@ -24,22 +24,25 @@ void printnumd(int a)
 		write(1, "6", 1);
 		write(1, "4", 1);
 		write(1, "8", 1);
-		return;
+		return (11);
 	}
 	if (a < 0)
 	{
 		a = -a;
 		write(1, "-", 1);
+		contador++;
 	}
-	else if (a == 0)
+	if (a == 0)
 	{
-	       return;
+		write(1, "0", 1);
+		return (1);
 	}
 	c = (a % 10) + '0';
 	b = a / 10;
-	if (a != 0)
+	if (b != 0)
 	{
-		printnumd(b);
+		contador += printnumd(b);
 	}
 	write(1, &c, 1);
+	return (contador);
 }
