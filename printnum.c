@@ -44,5 +44,5 @@ int printnumd(int a)
 		contador += printnumd(b);
 	}
 	write(1, &c, 1);
-	return (contador);
+	return (contador + 1);
 }
