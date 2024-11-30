@@ -79,6 +79,9 @@ int _printf(const char *format, ...)
 				case 'd':
 					printnumd(va_arg(arg, int));
 					break;
+				case 'i':
+					printnumd(va_arg(arg, int));
+					break;
 			}
 		}
 		else if (format[i] == '\\')
