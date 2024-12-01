@@ -60,13 +60,13 @@ int _printf(const char *format, ...)
 			write(1, &format[i], 1);
 			contador++;
 		}
-		else if (format[i] == '%' && format[i + 1] == '\0')
-			return (-1);
-		if (format[i] == '%')
+		else if (format[i] == '%')
 		{
 			i++;
 			switch (format[i])
 			{
+				case '\0':
+					return(-1);
 				case 'c':
 					printch(va_arg(arg, int), &contador);
 					break;
