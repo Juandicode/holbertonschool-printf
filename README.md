@@ -26,7 +26,7 @@ En caso de error, retorna -1.
 
 main.h: Archivo de cabecera que contiene las declaraciones de funciones utilizadas en el proyecto.
 
-printf.c: Implementación principal de la función _printf.
+printf.c: Implementación principal de la función _prin, tambien contiene las funciones printch que imprime chars, printstr que imprime strings y printpercent que imprime "%"
 
 printnum.c: Contiene la función printnumd, que maneja la impresión de números enteros.
 
@@ -63,8 +63,7 @@ Edge case: -123
 
 [Juan Diego Martinez Haedo]
 
-[Martin Suarez]
-
+[Martín Suárez Bruschera]
 
 ¡Gracias por revisar este README! 😄
 
