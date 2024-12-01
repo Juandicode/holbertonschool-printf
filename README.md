@@ -34,15 +34,8 @@ main.c: Archivo de pruebas que muestra ejemplos de uso de _printf y compara su s
 
 🔄 Flowchart (Diagrama de Flujo)
 
-graph TD
-    A[Inicio] --> B{¿Formato válido?}
-    B -->|Sí| C[Procesar Especificador]
-    B -->|No| D[Imprimir carácter tal cual]
-    C --> E[Incrementar contador]
-    D --> E
-    E --> F{¿Fin de la cadena?}
-    F -->|No| B
-    F -->|Sí| G[Retornar contador]
+![image](https://github.com/user-attachments/assets/de58bd90-f8c7-4e31-a43b-0f04f5111dc2)
+
 
 💻 Casos de Ejemplo y Salida Esperada
 
