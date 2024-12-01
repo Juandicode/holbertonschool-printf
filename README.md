@@ -68,7 +68,8 @@ Edge case: -123
 
 ✍️ Autores
 
-[Tu Nombre]
+[Juan Diego Martinez Haedo]
+[Martin Suarez]
 
 ¡Gracias por revisar este README! 😄
 
