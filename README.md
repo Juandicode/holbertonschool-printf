@@ -65,6 +65,6 @@ Edge case: -123
 
 [Martín Suárez Bruschera]
 
-¡Gracias por revisar este README! 😄
+
 
 
